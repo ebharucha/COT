@@ -63,7 +63,7 @@ df_totrep_change = df_cot_short_sel_mkts.groupby(['Markets'])['Change in Total R
                                                               'Change in Total Reportable-Short (All)']
 
 fig, axes = plt.subplots(nrows=4, ncols=2)
-fig.suptitle('Long, Short positons & changes in Long, Short positions', fontsize=16)
+fig.suptitle(f'Long, Short positons & changes in Long, Short positions - {df_cot_short_sel_mkts.iloc[0,1]}', fontsize=16)
 
 df_noncom.first().plot(kind='bar', ax=axes[0,0], grid=True, figsize=(15,25))
 df_com.first().plot(kind='bar', grid=True, ax=axes[1,0])
